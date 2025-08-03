@@ -1,16 +1,18 @@
 #include "testlib.h"
 using namespace std;
 
-const int MAXN = 1000;
-
-int main(int argc, char* argv[]) {
-	registerValidation(argc, argv);
-	// about testlib, see https://codeforces.com/blog/entry/18426
-
-	// TODO
-	inf.readInt(1, MAXN, "n");
-	inf.readEoln();
-	inf.readEof();
-
-	return 0;
+const int maxn = 5e5;
+const int maxc = 1e9;
+int main() {
+	registerValidation();
+	int N = inf.readInt(1, maxn);
+    inf.readSpace();
+    int K = inf.readInt(1, N);
+    inf.readEoln();
+	for(int i = 1; i <= N; ++i){
+        inf.readInt(-maxc, maxc);
+        if(i == N) inf.readEoln();
+        else inf.readSpace();
+    }
+    inf.readEof();
 }

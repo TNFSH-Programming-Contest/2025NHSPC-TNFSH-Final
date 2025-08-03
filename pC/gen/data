@@ -1,8 +1,43 @@
-# see https://github.com/ioi-2017/tps/blob/master/docs/README.md#gendata
-# TODO
 @subtask samples
-manual example-1.in
+manual example-01.in
+manual example-02.in
 
-@subtask full
-gen	20
-gen	30
+@subtask 1
+subtask_1 200000 1000000000 1
+subtask_1 200000 1000000000 2
+subtask_1 200000 1000000000 3
+subtask_1 200000 1000000000 4
+subtask_1 200000 2000 5
+
+@subtask 2
+manual example-01.in
+manual example-02.in
+lr_far 200000 5000 5
+lr_far 200000 5000 -5
+n_times 200000 5000 1
+zero_times 200000 5000 1
+random 200000 5000 1
+random 200000 5000 2
+random 200000 5000 3
+
+@subtask 3
+subtask_3 200000 1000000000 1
+subtask_3 200000 1000000000 2
+subtask_3 200000 1000000000 3
+subtask_3 200000 1000000000 4
+subtask_3 200000 2000 5
+
+@subtask 4
+@include 1
+@include 2
+@include 3
+@include 4
+lr_far 200000 1000000000 5
+lr_far 200000 1000000000 -5
+lr_far 200000 1000000000 20
+lr_far 200000 1000000000 -20
+n_times 200000 1000000000 1
+zero_times 200000 1000000000 1
+random 200000 1000000000 1
+random 200000 1000000000 2
+random 200000 2000 3
