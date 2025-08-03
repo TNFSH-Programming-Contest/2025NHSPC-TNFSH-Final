@@ -1,0 +1,36 @@
+cake2.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.016     check[OK]        1  [Correct]               
+0-02                sol[OK]    0.011     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.043     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.044     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.043     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.044     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.011     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.012     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.012     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.011     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.012     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.011     check[OK]        1  [Correct]               
+2-07                sol[OK]    0.012     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.033     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.033     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.034     check[OK]        1  [Correct]               
+3-04                sol[OK]    0.052     check[OK]        1  [Correct]               
+4-01                sol[OK]    0.047     check[OK]        1  [Correct]               
+4-02                sol[OK]    0.046     check[OK]        1  [Correct]               
+4-03                sol[OK]    0.046     check[OK]        1  [Correct]               
+4-04                sol[OK]    0.047     check[OK]        1  [Correct]               
+4-05                sol[OK]    0.048     check[OK]        1  [Correct]               
+4-06                sol[OK]    0.047     check[OK]        1  [Correct]               
+samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+1                   [4/4 tests]    [Correct]             [4/4 pts]      [match with expected]             1-01
+2                   [7/7 tests]    [Correct]             [23/23 pts]    [match with expected]             2-01
+3                   [4/4 tests]    [Correct]             [29/29 pts]    [match with expected]             3-01
+4                   [21/21 tests]  [Correct]             [44/44 pts]    [match with expected]             1-01
+
+Subtask summary
+100/100 pts
+
+Finished.
+
