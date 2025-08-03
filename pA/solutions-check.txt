@@ -1,39 +1,39 @@
 tribe.cpp
 solution            compile[OK]
 checker             compile[OK]
-0-01                sol[OK]    0.011     check[OK]        1  [Correct]               
+0-01                sol[OK]    0.011     check[OK]        0  [Wrong Answer]          
 0-02                sol[OK]    0.011     check[OK]        1  [Correct]               
-1-01                sol[OK]    0.016     check[OK]        1  [Correct]               
-1-02                sol[OK]    0.038     check[OK]        0  [Wrong Answer]          
-1-03                sol[OK]    0.040     check[OK]        0  [Wrong Answer]          
-1-04                sol[OK]    0.027     check[OK]        0  [Wrong Answer]          
-2-01                sol[OK]    0.026     check[OK]        0  [Wrong Answer]          
-2-02                sol[OK]    0.016     check[OK]        1  [Correct]               
-2-03                sol[OK]    0.022     check[OK]        1  [Correct]               
-2-04                sol[OK]    0.017     check[OK]        1  [Correct]               
-2-05                sol[OK]    0.020     check[OK]        1  [Correct]               
-3-01                sol[OK]    0.015     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.026     check[OK]        0  [Wrong Answer]          
+1-02                sol[OK]    0.021     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.021     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.016     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.015     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.027     check[OK]        0  [Wrong Answer]          
+2-03                sol[OK]    0.040     check[OK]        0  [Wrong Answer]          
+2-04                sol[OK]    0.028     check[OK]        0  [Wrong Answer]          
+2-05                sol[OK]    0.034     check[OK]        0  [Wrong Answer]          
+3-01                sol[OK]    0.027     check[OK]        0  [Wrong Answer]          
 3-02                sol[OK]    0.015     check[OK]        1  [Correct]               
-3-03                sol[OK]    0.016     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.015     check[OK]        1  [Correct]               
 3-04                sol[OK]    0.027     check[OK]        0  [Wrong Answer]          
 3-05                sol[OK]    0.027     check[OK]        0  [Wrong Answer]          
 3-06                sol[OK]    0.027     check[OK]        0  [Wrong Answer]          
-3-07                sol[OK]    0.027     check[OK]        0  [Wrong Answer]          
+3-07                sol[OK]    0.028     check[OK]        0  [Wrong Answer]          
 3-08                sol[OK]    0.027     check[OK]        0  [Wrong Answer]          
-3-09                sol[OK]    0.015     check[OK]        1  [Correct]               
-3-10                sol[OK]    0.026     check[OK]        0  [Wrong Answer]          
-3-11                sol[OK]    0.016     check[OK]        1  [Correct]               
-4-01                sol[OK]    0.038     check[OK]        0  [Wrong Answer]          
-4-02                sol[OK]    0.038     check[OK]        0  [Wrong Answer]          
-4-03                sol[OK]    0.035     check[OK]        0  [Wrong Answer]          
-4-04                sol[OK]    0.038     check[OK]        0  [Wrong Answer]          
-4-05                sol[OK]    0.034     check[OK]        0  [Wrong Answer]          
-4-06                sol[OK]    0.016     check[OK]        1  [Correct]               
-samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
-1                   [4/4 tests]    [Wrong Answer]        [0/3 pts]      [expected: model_solution]        1-02
-2                   [5/5 tests]    [Wrong Answer]        [0/13 pts]     [expected: model_solution]        2-01
-3                   [11/11 tests]  [Wrong Answer]        [0/47 pts]     [expected: model_solution]        3-04
-4                   [26/26 tests]  [Wrong Answer]        [0/37 pts]     [expected: model_solution]        1-02
+3-09                sol[OK]    0.025     check[OK]        0  [Wrong Answer]          
+3-10                sol[OK]    0.015     check[OK]        1  [Correct]               
+3-11                sol[OK]    0.015     check[OK]        1  [Correct]               
+4-01                sol[OK]    0.021     check[OK]        1  [Correct]               
+4-02                sol[OK]    0.021     check[OK]        1  [Correct]               
+4-03                sol[OK]    0.020     check[OK]        1  [Correct]               
+4-04                sol[OK]    0.021     check[OK]        1  [Correct]               
+4-05                sol[OK]    0.035     check[OK]        0  [Wrong Answer]          
+4-06                sol[OK]    0.028     check[OK]        0  [Wrong Answer]          
+samples             [2/2 tests]    [Wrong Answer]        [0/0 pts]      [expected: model_solution]        0-01
+1                   [4/4 tests]    [Wrong Answer]        [0/3 pts]      [expected: model_solution]        1-01
+2                   [5/5 tests]    [Wrong Answer]        [0/13 pts]     [expected: model_solution]        2-02
+3                   [11/11 tests]  [Wrong Answer]        [0/47 pts]     [expected: model_solution]        3-01
+4                   [26/26 tests]  [Wrong Answer]        [0/37 pts]     [expected: model_solution]        1-01
 
 Subtask summary
 0/100 pts
