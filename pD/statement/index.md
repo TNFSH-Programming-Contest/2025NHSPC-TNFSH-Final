@@ -179,17 +179,13 @@ namespace{
         cout << "Wrong Answer: " << msg << endl;
         exit(0);
     }
-}
-int compare_numbers(int l, int r){
-    if(EndInit){
-        Wrong_Answer("Invalid call");
-    } if(l <= 0 || l > N || r <= 0 || r > N || l > r){
+} int compare_numbers(int l, int r){
+    if(EndInit)  Wrong_Answer("Invalid call");
+    if(l <= 0 || l > N || r <= 0 || r > N || l > r)
         Wrong_Answer("Invalid position: " + to_string(l) + " " + to_string(r));
-    }
     Query_count++;
     return Inv[l][r];
-}
-int main() {
+} int main() {
 	cin >> N >> K;
     for(int i = 1; i <= N; ++i) cin >> P[i];
 	for(int i = 1; i <= N; ++i) for(int j = i + 1; j <= N; ++j)
@@ -201,7 +197,7 @@ int main() {
 	for(int i = 1; i <= K; ++i){
 		int x; cin >> x;
 		Ans[i] = query_from_alice(x);
-	}
+	} 
     for(int i = 1; i <= K; ++i) cout << Ans[i] << " \n"[i == K];
 	cout << Query_count / N << "\n";
 }
