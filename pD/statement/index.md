@@ -163,7 +163,7 @@ $$
 
 \clearpage
 
-下方程式碼可在本題下方壓縮檔裡的 grader.cpp 獲得  
+下方程式碼可在pA下方壓縮檔 permutation2.zip 裡的 grader.cpp 中獲得  
 請注意，上傳程式碼時請勿直接上傳此範例評分程式，上傳格式請參考上述範例程式碼。
 ```cpp
 #include <cstdlib>
@@ -176,14 +176,14 @@ int query_from_alice(int a);
 namespace{
     int N, K, Query_count = 0, P[1005], Ans[1005], Inv[1005][1005];
     bool EndInit = false;
-    void Wrong_Answer(const string msg) {
+    void WA(const string msg) {
         cout << "Wrong Answer: " << msg << endl;
         exit(0);
     }
 } int compare_numbers(int l, int r){
-    if(EndInit)  Wrong_Answer("Invalid call");
+    if(EndInit)  WA("Invalid call");
     if(l <= 0 || l > N || r <= 0 || r > N || l > r)
-        Wrong_Answer("Invalid position: " + to_string(l) + " " + to_string(r));
+        WA("Invalid position: " + to_string(l) + " " + to_string(r));
     Query_count++;
     return Inv[l][r];
 } int main() {
