@@ -24,7 +24,6 @@ int main(int argc, char* argv[]) {
 	if(s == "No") quit(_ok);
 	int n = inf.readInt();
 	int k = inf.readInt();
-	k = (n - 1) - k;
 	vector< int > c(n + 1);
 	DSU dsu(n);
 	for(int i = 1; i <= n; ++i) c[i] = inf.readInt();
