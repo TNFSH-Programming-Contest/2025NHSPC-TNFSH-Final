@@ -1,8 +1,8 @@
 {
-	"contest_name": "TODO: 競賽名稱",
+	"contest_name": "114學年度資訊學科能力競賽臺南一中校內複選",
 	"problem_label": "A",
-	"name": "TODO:_English_short_name",
-	"title": "TODO: 題目名稱",
+	"name": "tribe",
+	"title": "部落衝突",
 	"memory_limit": 512,
 	"time_limit": 1.0,
 	"type": "Batch",
@@ -18,6 +18,6 @@
 	"score_mode": "max_subtask",
 	"task_type": "Batch",
 	"task_type_params": "{\"task_type_parameters_Batch_compilation\": \"alone\"}",
-	"has_checker": false,
+	"has_checker": true,
 	"score_type": "GroupMin"
 }
