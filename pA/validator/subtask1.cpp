@@ -7,7 +7,7 @@ int main() {
 	int N = inf.readInt(2, maxn);
     inf.readSpace();
     int K = inf.readInt(0, N - 1);
-    ensure(K == N - 1);
+    ensure(K == 0);
     inf.readEoln();
     for(int i = 1; i <= N; ++i){
         inf.readInt(1, N);

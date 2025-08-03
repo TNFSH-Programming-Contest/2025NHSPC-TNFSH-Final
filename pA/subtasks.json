@@ -10,13 +10,13 @@
         "1": {
             "index": 1,
             "score": 3,
-            "text": "$K = N - 1$",
+            "text": "$K = 0$",
             "validators": ["subtask1.cpp"]
         },
         "2": {
             "index": 2,
             "score": 13,
-            "text": "$K = 0$",
+            "text": "$K = N - 1$",
             "validators": ["subtask2.cpp"]
         },
         "3": {
