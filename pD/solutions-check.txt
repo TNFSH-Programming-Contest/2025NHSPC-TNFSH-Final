@@ -1,0 +1,23 @@
+permutation2.cpp
+solution            compile[OK]
+checker             compile[OK]
+0-01                sol[OK]    0.011     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.011     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.011     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.011     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.015     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.015     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.015     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.015     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.014     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.015     check[OK]        1  [Correct]               
+2-07                sol[OK]    0.014     check[OK]        1  [Correct]               
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+1                   [3/3 tests]    [Correct]             [10/10 pts]    [match with expected]             1-01
+2                   [10/10 tests]  [Correct]             [90/90 pts]    [match with expected]             1-01
+
+Subtask summary
+100/100 pts
+
+Finished.
+
