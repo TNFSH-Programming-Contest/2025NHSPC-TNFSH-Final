@@ -151,7 +151,7 @@ $$
 $$
 \begin{aligned}
 &b_1\ b_2\ \dots\ b_k \\
-&\text{Accepted: } Q
+& Q
 \end{aligned}
 $$
 
