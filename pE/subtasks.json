@@ -1,0 +1,35 @@
+{
+    "global_validators": ["validator.cpp"],
+    "subtasks": {
+        "samples": {
+            "index": 0,
+            "score": 0,
+            "text": "範例輸入輸出",
+            "validators": []
+        },
+        "1": {
+            "index": 1,
+            "score": 5,
+            "text": "$N \\le 10",
+            "validators": ["subtask1.cpp"]
+        },
+        "2": {
+            "index": 2,
+            "score": 45,
+            "text": "$N \\le 20$",
+            "validators": ["subtask2.cpp"]
+        },
+        "3": {
+            "index": 3,
+            "score": 13,
+            "text": "保證 $M$ 是質數",
+            "validators": ["subtask3.cpp"]
+        },
+        "4": {
+            "index": 4,
+            "score": 37,
+            "text": "無額外限制",
+            "validators": []
+        }
+    }
+}
