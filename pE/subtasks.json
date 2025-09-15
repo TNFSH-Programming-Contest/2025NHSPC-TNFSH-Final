@@ -10,7 +10,7 @@
         "1": {
             "index": 1,
             "score": 5,
-            "text": "$N \\le 10",
+            "text": "$N \\le 10$",
             "validators": ["subtask1.cpp"]
         },
         "2": {
