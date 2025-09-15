@@ -1,1 +1,0 @@
-{"protocol_version": 1, "code": "cake2", "name": "\u5206\u86cb\u7cd5 2", "time_limit": 1.0, "memory_limit": 536870912, "score_precision": 0, "task_type": "Batch", "task_type_params": "{\"task_type_parameters_Batch_compilation\": \"alone\"}", "score_mode": "max_subtask"}
