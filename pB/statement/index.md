@@ -19,12 +19,7 @@ $$
 \min_{l_t \le i \le r_t} C_i & \text{otherwise  }
 \end{cases}}
 $$
-
-
 我們要找出所有合法的切蛋糕方式中好感值總和最大的是多少。
-
-
-
 
 \clearpage
 

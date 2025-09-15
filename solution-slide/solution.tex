@@ -116,7 +116,7 @@
 \section*{Overview}
 
 \begin{frame}[fragile]{\btitle{預期解出人數}}
-	預測校隊線 : \textcolor{blue}{450}
+	預測校隊線 : \textcolor{blue}{400}
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis} [%
@@ -128,11 +128,11 @@
 				xtick={1,2,3,4,5,6},
 				xticklabels={A,B,C,D,E,F}]
 			\addplot plot coordinates {
-				(1,9) 
-				(2,9) 
-				(3,6)
+				(1,8) 
+				(2,1) 
+				(3,5)
 				(4,4)
-				(5,5)
+				(5,10)
 				(6,1)
 			};
 			
@@ -150,7 +150,7 @@
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{實際解出人數}}
-	預測複選線 : \textcolor{blue}{450}  實際複選線 : \textcolor{red}{318}
+	預測複選線 : \textcolor{blue}{400}  實際複選線 : \textcolor{red}{0}
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis} [%
@@ -162,19 +162,19 @@
 				xtick={1,2,3,4,5,6},
 				xticklabels={A,B,C,D,E,F}]
 			\addplot plot coordinates {
-				(1,25) 
-				(2,11) 
-				(3,14) 
-				(4,18)
-				(5,7)
-				(6,4)
+				(1,8) 
+				(2,1) 
+				(3,5)
+				(4,4)
+				(5,10)
+				(6,1)
 			};
 			\addplot plot coordinates {
-				(1,13) 
-				(2,8) 
-				(3,13) 
-				(4,8)
-				(5,8)
+				(1,1) 
+				(2,1) 
+				(3,1) 
+				(4,1)
+				(5,1)
 				(6,1)
 			};
 			\end{axis}
@@ -185,118 +185,138 @@
 \section{出題者想說的 和 Fun Fact}
 
 \begin{frame}[fragile]{\btitle{前言}}
-	出題出很久，希望大家都有好好打
+	\item 出題出很久，希望大家都有好好打
 	\pause
-
-	希望比賽過程不要出事
+	\item 希望測資不要爛掉
 
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{Fun Fact --- pB}}
 	\begin{itemize}
-		\item 史蒂夫最後會說甜菜是因為甜菜的根是圓的 (圓根)，並且有雙關暗示艾力克斯是天才。
+		\item 本來 $K > 1$，初選過發現大家都好強趕緊加難
 		\pause
-		\item 米勒拉賓是一個判斷質數的演算法
+		\item 出題者自己在這題燒雞超久
 		\pause
-		\item Alapin Variation 是西洋棋中的一個開局，走法為 1.e4 c5 2.c3。
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{\btitle{Fun Fact --- pC}}
-	\begin{itemize}
-		\item 因為 2024 年的全國賽開始會出現互動題了，依照目前趨勢全國賽以後應該每年都會有一題互動題(我猜的)，所以大家必須要會寫互動題。
-		\pause
-		\item 本題序改編自 2024 全國賽測機題的 pB，為了避免有些人沒看過那題，所以在測機也用同一個模板出了一題，雖然有沒有看過不影響作答就是了。
-		\pause
-		\item 應該是校內賽第一次出現互動題
+		\item 花了 3 小時暴力跑對拍，測資應該沒錯
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{Fun Fact --- pE}}
 	\begin{itemize}
-		\item 本題序小部分參考 2023 校內初選-地震。
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{\btitle{Fun Fact --- pF}}
-	\begin{itemize}
-		\item 本題序小部分參考 2024 校內初選-忠孝東路走九遍。
+		\item 加難 pB 後發現整體題目好難，趕緊重出一題簽到題
 		\pause
-		\item 忠孝東路走九遍是一首老歌
-		\pause 
-		\item 在忠孝東路跑的捷運真的叫 BL (板南線)，而主角叫 Ame 是因為去年這題主角叫 Same，如有雷同純屬巧合。
+		\item 希望沒有人被範圍騙到
 	\end{itemize}
 \end{frame}
 
 
 \begin{frame}[fragile]{\secname}
 	\begin{enumerate}
-		\item A : 枚舉 + 國中數學
-		\item B : 數論 + 分 case 討論
-		\item C : 互動題
-		\item D : DP
-		\item E : 資料結構
-		\item F : 圖論
+		\item A : 構造題
+		\item B : DP + 優化
+		\item C : 貪心
+		\item D : greedy
+		\item E : 排列組合
+		\item F : 樹論
 	\end{enumerate}
 \end{frame}
 
-\section{A. 法陣 (triangle)}
+\section{A. 部落衝突 (tribe)}
+
 
 \begin{frame}[fragile]{\btitle{題目敘述}}
-	二維直角座標上給你六個點，問你這六個點是否能分成三個點三個點，使得這兩個三角形全等。
+	給你 $n$ 個點，每個點都有一個顏色 $C_i$，問你能不能把這 $n$ 個點連成一棵樹且恰好 $k$ 條邊的兩端是不同顏色。
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{子任務}}
 	\begin{enumerate}
+		\item $K = 0$
+		\item $K = N - 1$
+		\item $C_i \in \{1, 2\}$
 		\item 無額外限制
 	\end{enumerate}
 \end{frame}
 
-\begin{frame}[fragile]{\btitle{子任務 1 --- 無額外限制}}
-	 把 $\dbinom{6}{3}$ 種組合全部都暴搜看看就好。 \\
-	 
-	 判斷兩個三角形全等可以用國中學過的 SSS 全等，也就是三條邊的長度有沒有一一對應來判斷。
+\begin{frame}[fragile]{\btitle{子任務 1 --- $K = 0$}}
+	觀察一下可以發現所有點都要是相同顏色才能達成。 
+	\pause
+
+	因為要是有不同顏色的兩個點，他們之間一定有至少一條邊連接不同顏色。
 \end{frame}
 
-\section{B. 圓根(root)}
+\begin{frame}[fragile]{\btitle{子任務 2 --- $K = N - 1$}}
+	觀察一下可以發現如果所有點都相同顏色就不可能達成。 
+	\pause
+
+	否則我們可以選兩個不同顏色的點當代表，對於每個點都連到顏色不一樣的點上面就好。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 3 --- $C_i \in \{1, 2\}$}}
+	綜合 subtask 1, 2，我們可以推論出如果只有一種顏色，只有 $k = 0$ 才能滿足。
+
+	如果兩種顏色都有，那只要 $k \ge 1$ 都能達成，我們可以用類似 subtask 2 的方式構造。 \\
+	先選兩個不同顏色的代表點連起來，接著如果目前還沒有 $k$ 條相異顏色的邊，那我們就把點連到相異顏色的代表點，如果已經有 $k$ 條了，那我們就把點連到相同顏色的代表點就好。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 4 --- 無額外限制}}
+	延續 subtask 3，我們把所有顏色都拿一個點起來當代表。 
+
+	假設有 $c$ 種不同顏色，那 $k \ge c - 1$ 才會有解，因為我們一定要用 $c - 1$ 條不同顏色的邊將這 $c$ 種顏色連通。
+	\pause
+
+	接著用 subtask 3 的構造方法，如果目前還沒有 $k$ 條相異顏色的邊，那我們就把點連到相異顏色的點，如果已經有 $k$ 條了，那我們就把點連到相同顏色的點就好。
+\end{frame}
+
+\section{B. 分蛋糕 2(cake2)}
 
 \begin{frame}[fragile]{\btitle{題目敘述}}
-	給你一個奇數 $n$，保證 $n$ 不是質數。 \\
-	問你 $n$ 能不能被表示成 $p^k$ 其中 $p$ 為奇質數且 $k$ 為正整數。
+	我們定義一個合法的切蛋糕方式為一系列的區間 $(l_1, r_1), (l_2, r_2), ..., (l_k, r_k)$ 滿足 $l_1 = 1$, $r_k = n$，並且對於所有 $1 \le i \le k$ 都有 $l_i \le r_i$，且對於所有 $1 \le i < k$，都有 $r_i + 1 =  l_{i + 1}$。
+	而這個切蛋糕方式所得到的好感值總和為 
+	$$
+	\sum_{t = 1}^{k}{\begin{cases}
+	0 & \text{if  } r_t - l_t + 1 < K \\
+	\min_{l_t \le i \le r_t} C_i & \text{otherwise  }
+	\end{cases}}
+	$$
+	我們要找出所有合法的切蛋糕方式中好感值總和最大的是多少。
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{子任務}}
 	\begin{enumerate}
-		\item $n \le 10^6$
-		\item $n \le 10^{12}$
+		\item $N \le 3000$
+		\item $K > 1$
+		\item $|C_i| \le 1$
 		\item 無額外限制
 	\end{enumerate}
 \end{frame}
 
-\begin{frame}[fragile]{\btitle{子任務 1 --- $n \le 10^6$}}
-	用 $O(n)$ 的方法將 $n$ 質因數分解就好
-\end{frame}
-
-\begin{frame}[fragile]{\btitle{子任務 2 --- $n \le 10^{12}$}}
-	用 $O(\sqrt{n})$ 的方法將 $n$ 質因數分解就好
-\end{frame}
-
-\begin{frame}[fragile]{\btitle{子任務 3 --- 無額外限制}}
-	用 $O(^4\sqrt{n})$ 的方法 (Pollard Rho) 將 $n$ 質因數分解就好
+\begin{frame}[fragile]{\btitle{子任務 1 --- $N \le 3000$}}
+	如果你有寫出初選的 pD，那你應該要會這個子任務
 	\pause
 
-	太超綱了 !! 換個方法
+	我們定義 $dp[i]$ 為 : 只看 $1$ ~ $i$，分數總和最大會是多少。  
+	因此我們有轉移式 $$dp[i] = \max(dp[i - 1], \max_{1 \le j \le i - k}{(dp[j] + \min_{j < t \le i}{C_t})})$$
+	而最後 $dp[n]$ 即為答案
 \end{frame}
 
-\begin{frame}[fragile]{\btitle{子任務 3 --- 無額外限制}}
-	我們可以觀察到，如果 $n$ 可以被表示成 $p^k$，其中如果 $k \ge 3$ 那麼 $p$ 一定小於等於 $^3 \sqrt{maxn} \approx 2 \times 10^6$ 。
+\begin{frame}[fragile]{\btitle{子任務 2 --- $K > 1$}}
+	可以想到一個貪心的結論，一定有一種最佳解切的區間長度都為 $K$ 或 $1$
 	\pause
 
-	因為題目保證不是質數，所以 $k$ 不會是 $1$
+	證明很簡單，這裡篇幅不夠就留給各位回去當練習了。
+
+	因此我們轉移式就可以用單調對列之類的資料結構 $O(n)$ 轉移了
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 3 --- $|C_i| \le 1$}}
+	我們不能切大小為 $1$ 的區間讓貢獻讓負的變成 $0$ 了。
 	\pause
 
-	因此我們只要先檢查 $p$ 能不能是小於等於 $2 \times 10^6$ 的所有數，如果都不行，那麼剩下的可能就是 $k = 2$， 所以只要在檢查 $n$ 是不是完全平方數就好了。
+	可以觀察到，其實 $0$ 很沒用，他在
+\end{frame}
 
+\begin{frame}[fragile]{\btitle{子任務 4 --- 無額外限制}}
+	
 \end{frame}
 
 \section{C. 隱藏的排列 (permutation)}

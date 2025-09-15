@@ -1,0 +1,7 @@
+\beamer@sectionintoc {2}{出題者想說的 和 Fun Fact}{4}{0}{1}
+\beamer@sectionintoc {3}{A. 法陣 (triangle)}{18}{0}{2}
+\beamer@sectionintoc {4}{B. 圓根(root)}{22}{0}{3}
+\beamer@sectionintoc {5}{C. 隱藏的排列 (permutation)}{32}{0}{4}
+\beamer@sectionintoc {6}{D. 切蛋糕 (cake)}{42}{0}{5}
+\beamer@sectionintoc {7}{E. 地震 (earthquake)}{48}{0}{6}
+\beamer@sectionintoc {8}{F. 忠孝東路走一遍 (road)}{55}{0}{7}
