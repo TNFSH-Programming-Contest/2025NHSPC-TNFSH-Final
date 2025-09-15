@@ -10,24 +10,24 @@
         "1": {
             "index": 1,
             "score": 4,
-            "text": "$K = 1$",
+            "text": "$N \\le 3000$",
             "validators": ["subtask1.cpp"]
         },
         "2": {
             "index": 2,
-            "score": 23,
-            "text": "$N \\le 3000$",
+            "score": 36,
+            "text": "$K > 1$",
             "validators": ["subtask2.cpp"]
         },
         "3": {
             "index": 3,
-            "score": 29,
+            "score": 21,
             "text": "$|C_i| \\le 1$",
             "validators": ["subtask3.cpp"]
         },
         "4": {
             "index": 4,
-            "score": 44,
+            "score": 39,
             "text": "無額外限制",
             "validators": []
         }

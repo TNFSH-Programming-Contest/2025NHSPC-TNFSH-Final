@@ -1,13 +1,13 @@
 #include "testlib.h"
 using namespace std;
 
-const int maxn = 3000;
+const int maxn = 200000;
 const int maxc = 1e9;
 int main() {
 	registerValidation();
 	int N = inf.readInt(1, maxn);
     inf.readSpace();
-    int K = inf.readInt(1, N);
+    int K = inf.readInt(2, N);
     inf.readEoln();
 	for(int i = 1; i <= N; ++i){
         inf.readInt(-maxc, maxc);

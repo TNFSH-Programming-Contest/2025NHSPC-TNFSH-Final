@@ -1,0 +1,484 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[hyperref,UTF8,notheorems,xcolor={dvipsnames}]{beamer}
+\usepackage[dvipsnames]{xcolor}
+\usetheme{Rochester}
+\usepackage{amsmath, mathtools, graphicx}
+\usepackage{standalone}
+\usepackage[most]{tcolorbox}
+\usepackage[normalem]{ulem}
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pifont}
+\usepackage{fontawesome5}
+\usepgfplotslibrary{polar}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc,angles,quotes}
+\defaultfontfeatures{Mapping=tex-text}
+\usefonttheme{professionalfonts}
+\usepackage{concmath}
+\usepackage{minted}
+
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\newcommand{\CC}[1]{#1}
+
+\newcommand{\Cincluded}{{\small\cmark}}
+\newcommand{\Cdefine}{{\small\cmark\faFile*[regular]}}
+\newcommand{\Ccodeonly}{{\small\cmark\faFile*~}}
+\newcommand{\Cnofocus}{{\small\faQuestion}}
+\newcommand{\Cexmaybe}{{\small\xmark\faQuestionCircle}}
+\newcommand{\Cexcluded}{{\small\xmark}}
+
+\newcommand{\Iincluded}{\item[\hbox to 1.8em{\Cincluded\hfill}]}
+\newcommand{\Idefine}{\item[\hbox to 1.8em{\Cdefine\hfill}]}
+\newcommand{\Icodeonly}{\item[\hbox to 1.8em{\Ccodeonly\hfill}]}
+\newcommand{\Inofocus}{\item[\hbox to 1.8em{\Cnofocus\hfill}]}
+\newcommand{\Iexmaybe}{\item[\hbox to 1.8em{\Cexmaybe\hfill}]}
+\newcommand{\Iexcluded}{\item[\hbox to 1.8em{\Cexcluded\hfill}]}
+
+\DeclareRobustCommand{\rddots}{\text{\reflectbox{$\ddots$}}}
+
+
+\usepackage{graphicx}
+\graphicspath{ {./../images/} }
+
+\def\codesize{\fontsize{8}{9}\selectfont}
+\setmonofont[Mapping=]{Source Code Pro}
+\setminted{fontsize=\codesize, linenos, frame=lines, mathescape, autogobble, tabsize=4}
+\setCJKmainfont[AutoFakeSlant,BoldFont=Noto Sans CJK TC Bold]{Noto Sans CJK TC}
+
+\setlength{\parskip}{\baselineskip} 
+\newcommand{\btitle}[1]{{\secname} -- #1}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{property}{性質}
+\newtheorem{corollary}{推論}
+\newtheorem{problem}{例題}
+
+
+\newtheorem{definition}{定義}
+\AtBeginEnvironment{definition}{
+  \setbeamercolor{block title}{fg=white,bg=red!70!black}
+  \setbeamercolor{block body}{fg=black, bg=block title.bg!10!bg}
+}
+
+\newtheorem{exercise}{習題}
+\AtBeginEnvironment{exercise}{
+  \setbeamercolor{block title}{fg=white,bg=green!30!black}
+  \setbeamercolor{block body}{fg=black, bg=block title.bg!10!bg}
+}
+
+
+\AtBeginSection[]{
+%   \begin{frame}
+%     \tableofcontents[currentsection,hideallsubsections]
+%   \end{frame}
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=6pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\LARGE\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+
+\AtBeginSubsection[]{
+  \begin{frame}
+    \tableofcontents[subsectionstyle=show/shaded/hide]
+  \end{frame}
+}
+
+\usepackage{ctable}
+\usepackage{tabularx}
+
+\setlength{\parskip}{\baselineskip}
+
+
+\title{114 臺南一中學科能力競賽校內複選}
+
+\hypersetup{CJKbookmarks=true}
+\begin{document}
+
+\author{題解}
+\date{Sep 25 2025}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\section*{Overview}
+
+\begin{frame}[fragile]{\btitle{預期解出人數}}
+	預測校隊線 : \textcolor{blue}{450}
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis} [%
+				ybar,
+				bar width=12pt,
+				xmin=0.5,
+				xmax=6.5,
+				ymin=0,
+				xtick={1,2,3,4,5,6},
+				xticklabels={A,B,C,D,E,F}]
+			\addplot plot coordinates {
+				(1,9) 
+				(2,9) 
+				(3,6)
+				(4,4)
+				(5,5)
+				(6,1)
+			};
+			
+			\addplot [color=white] plot coordinates {
+				(1,1) 
+				(2,1) 
+				(3,1) 
+				(4,1)
+				(5,1)
+				(6,1)
+			};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{實際解出人數}}
+	預測複選線 : \textcolor{blue}{450}  實際複選線 : \textcolor{red}{318}
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis} [%
+				ybar,
+				bar width=12pt,
+				xmin=0.5,
+				xmax=6.5,
+				ymin=0,
+				xtick={1,2,3,4,5,6},
+				xticklabels={A,B,C,D,E,F}]
+			\addplot plot coordinates {
+				(1,25) 
+				(2,11) 
+				(3,14) 
+				(4,18)
+				(5,7)
+				(6,4)
+			};
+			\addplot plot coordinates {
+				(1,13) 
+				(2,8) 
+				(3,13) 
+				(4,8)
+				(5,8)
+				(6,1)
+			};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\section{出題者想說的 和 Fun Fact}
+
+\begin{frame}[fragile]{\btitle{前言}}
+	出題出很久，希望大家都有好好打
+	\pause
+
+	希望比賽過程不要出事
+
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{Fun Fact --- pB}}
+	\begin{itemize}
+		\item 史蒂夫最後會說甜菜是因為甜菜的根是圓的 (圓根)，並且有雙關暗示艾力克斯是天才。
+		\pause
+		\item 米勒拉賓是一個判斷質數的演算法
+		\pause
+		\item Alapin Variation 是西洋棋中的一個開局，走法為 1.e4 c5 2.c3。
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{Fun Fact --- pC}}
+	\begin{itemize}
+		\item 因為 2024 年的全國賽開始會出現互動題了，依照目前趨勢全國賽以後應該每年都會有一題互動題(我猜的)，所以大家必須要會寫互動題。
+		\pause
+		\item 本題序改編自 2024 全國賽測機題的 pB，為了避免有些人沒看過那題，所以在測機也用同一個模板出了一題，雖然有沒有看過不影響作答就是了。
+		\pause
+		\item 應該是校內賽第一次出現互動題
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{Fun Fact --- pE}}
+	\begin{itemize}
+		\item 本題序小部分參考 2023 校內初選-地震。
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{Fun Fact --- pF}}
+	\begin{itemize}
+		\item 本題序小部分參考 2024 校內初選-忠孝東路走九遍。
+		\pause
+		\item 忠孝東路走九遍是一首老歌
+		\pause 
+		\item 在忠孝東路跑的捷運真的叫 BL (板南線)，而主角叫 Ame 是因為去年這題主角叫 Same，如有雷同純屬巧合。
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{\secname}
+	\begin{enumerate}
+		\item A : 枚舉 + 國中數學
+		\item B : 數論 + 分 case 討論
+		\item C : 互動題
+		\item D : DP
+		\item E : 資料結構
+		\item F : 圖論
+	\end{enumerate}
+\end{frame}
+
+\section{A. 法陣 (triangle)}
+
+\begin{frame}[fragile]{\btitle{題目敘述}}
+	二維直角座標上給你六個點，問你這六個點是否能分成三個點三個點，使得這兩個三角形全等。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務}}
+	\begin{enumerate}
+		\item 無額外限制
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 1 --- 無額外限制}}
+	 把 $\dbinom{6}{3}$ 種組合全部都暴搜看看就好。 \\
+	 
+	 判斷兩個三角形全等可以用國中學過的 SSS 全等，也就是三條邊的長度有沒有一一對應來判斷。
+\end{frame}
+
+\section{B. 圓根(root)}
+
+\begin{frame}[fragile]{\btitle{題目敘述}}
+	給你一個奇數 $n$，保證 $n$ 不是質數。 \\
+	問你 $n$ 能不能被表示成 $p^k$ 其中 $p$ 為奇質數且 $k$ 為正整數。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務}}
+	\begin{enumerate}
+		\item $n \le 10^6$
+		\item $n \le 10^{12}$
+		\item 無額外限制
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 1 --- $n \le 10^6$}}
+	用 $O(n)$ 的方法將 $n$ 質因數分解就好
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 2 --- $n \le 10^{12}$}}
+	用 $O(\sqrt{n})$ 的方法將 $n$ 質因數分解就好
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 3 --- 無額外限制}}
+	用 $O(^4\sqrt{n})$ 的方法 (Pollard Rho) 將 $n$ 質因數分解就好
+	\pause
+
+	太超綱了 !! 換個方法
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 3 --- 無額外限制}}
+	我們可以觀察到，如果 $n$ 可以被表示成 $p^k$，其中如果 $k \ge 3$ 那麼 $p$ 一定小於等於 $^3 \sqrt{maxn} \approx 2 \times 10^6$ 。
+	\pause
+
+	因為題目保證不是質數，所以 $k$ 不會是 $1$
+	\pause
+
+	因此我們只要先檢查 $p$ 能不能是小於等於 $2 \times 10^6$ 的所有數，如果都不行，那麼剩下的可能就是 $k = 2$， 所以只要在檢查 $n$ 是不是完全平方數就好了。
+
+\end{frame}
+
+\section{C. 隱藏的排列 (permutation)}
+
+\begin{frame}[fragile]{\btitle{題目敘述}}
+	互動題，有一個 $1$ 到 $n$ 的隱藏排列 $p$ ，每次你可以詢問 $p_i - p_j$ 是多少，花 $n - 1$ 次以內的詢問還原出那個序列。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務}}
+	\begin{enumerate}
+		\item $n = 3$
+		\item $p_1 = 1$
+		\item 無額外限制
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 1 --- $n = 3$}}
+	因為就 3! 種可能的排列，我們觀察一下每一個排列的 $p_2 - p_1$ 和 $p_3 - p_1$ 是多少 
+	\pause
+
+	1 2 3 -> (1, 2)  \\
+	1 3 2 -> (2, 1)  \\
+	2 1 3 -> (-1, 2)  \\
+	2 3 1 -> (1, -2)  \\
+	3 1 2 -> (-2, 1)  \\
+	3 2 1 -> (-1, -1)
+	\pause
+
+	可以發現兩兩相異，因此我們可以用這兩個詢問找到對應的那個排列。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 2 --- $p_1 = 1$}}
+	如果我們知道了 $p_i - p_1 = k$，那麼我們就可以推得 $p_i = p_1 + k$ 了。
+	
+	又知道 $p_1 = 1$，因此就可以算出所有 $p_i$ 了。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 3 --- 無額外限制}}
+	我們先假設 $p_1 = 0$，如此可以用 subtask 2 的方法得出一個排列，我們假設叫 $q$。
+	\pause
+
+	舉例來說，那個隱藏的序列 $p$ 是 [2 4 1 5 3]，那我們得到的 $q$ 會是 [0 2 -1 3 1]。
+	\pause
+
+	我們可以觀察到 $p$ 和 $q$ 的最小值會發生在同個位置，因此 $q$ 最小值那個地方在 $p$ 中會是 $1$。
+	
+	因此我們只要將這個 $q$ 全部加上 $1$ - ($q$ 的最小值) 就會變成 $p$ 了。
+
+\end{frame}
+
+
+
+\section{D.  切蛋糕 (cake)}
+
+\begin{frame}[fragile]{\btitle{題目敘述}}
+	給你一個長度為 $n$ $(n \le 3000)$ 的序列，你可以把它切成很多個區間。
+	
+	對於每個區間，你可以選擇把那個區間的分數設為 $0$ 或 那個區間的數字總和乘以區間長度，問你分數總和最大可以是多少。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務}}
+	\begin{enumerate}
+		\item $C_i$ 皆相同
+		\item 無額外限制
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 1 --- $C_i$ 皆相同}}
+	可以觀察到不要切一定會最好。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 2 --- 無額外限制}}
+	我們定義 $dp[i]$ 為 : 只看 $1$ 到 $i$，分數總和最大會是多少。  
+	\pause
+
+	因此我們有轉移式 $$dp[i] = \max(dp[i - 1], \max_{1 \le j < i}{(dp[j] + sum(j + 1, i) \times (i - j))})$$
+
+	其中 $sum(j + 1, i)$ 為 $j + 1$ 到 $i$ 的數字總和，可以用前綴和快速查詢。
+
+	而最後 $dp[n]$ 即為答案
+
+\end{frame}
+
+
+\section{E. 地震 (earthquake)}
+
+\begin{frame}[fragile]{\btitle{題目敘述}}
+	給你一個長度為 $n$ 的序列 $h$，有 $q$ 個事件  \\
+	$1$ $l$ $r$ $c$ : 對 $l$ 到 $r$ 都加上 $c$  \\
+	$2$ $a$ $b$ : 問你有多少整數 $i$ 滿足 $a \le i < b$ 且 $h_i < h_{i + 1}$
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務}}
+	\begin{enumerate}
+		\item 不會有 $1$ $L$ $R$ $C$ 類型的事件
+		\item 所有 $2$ $A$ $B$ 的事件中 $A = 1, B = N$
+		\item 所有 $1$ $L$ $R$ $C$ 的事件中 $L = R$
+		\item 無額外限制
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 1 --- 不會有 $1$ $L$ $R$ $C$ 類型的事件}}
+	
+	開一個陣列 $p$，接著對於第 $h_i < h_{i + 1}$ 的所有 $i$，我們在 $p_i$ 上加 $1$，詢問時就相當於問 $p_l + ... + p_{r - 1}$ 的值，可以用前綴和快速回答。
+
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 2 --- 所有 $2$ $A$ $B$ 的事件中 $A = 1, B = N$}}
+	
+	可以觀察到，若出現第 $1$ 種操作，那 subtask 1 所述的陣列 $p$ 只會在 $a - 1$ 及 $b$ 的位置有可能發生改變，因此我們只要看這兩個位置有沒有改變就好。
+
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 3 --- 所有 $1$ $L$ $R$ $C$ 的事件中 $L = R$}}
+	
+	根據 subtask 1 和 2，我們可以發現這個陣列 $p$ 會需要修改，因此我們可以使用二元索引樹(BIT) 等資料結構來維護這個陣列 $p$。 
+
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 4 --- 無額外限制}}
+	
+	綜合上述子任務，我們還需要快速知道某個位置目前的值是多少，因此可以使用差分來維護陣列 $h$，這樣也可以使用二元索引樹來快速維護。
+
+\end{frame}
+
+
+\section{F. 忠孝東路走一遍 (road)}
+
+\begin{frame}[fragile]{\btitle{題目敘述}}
+	給你一個序列 $C$ 和 $X$, $Y$, $Z$，你一開始在 $1$ 上。
+
+	移動有兩種方式 : 
+
+	\begin{enumerate}
+		\item 花 $X$ 元從 $i$ 移動到 $i - 1$ 或 $i + 1$ \\
+		\item 選一個 $C_i = C_j$ 的 $j$ 並花 $Y$ 元從 $i$ 移動到 $j$
+	\end{enumerate}
+
+	對於第二種移動方式，有一個 $Z$ $(Z \le 2 Y)$ 元的優惠券，使用 $t$ 次第二種移動方式花的實際金錢為 $\max(0, t \times Y - Z)$
+
+	對於 $k = 1, 2, ..., n$ 問你從 $1$ 走到 $k$ 再從 $k$ 走到 $n$ 最小花費是多少。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務}}
+	\begin{enumerate}
+		\item $C_i$ 皆相同
+		\item 對於所有 $k$，滿足 $C_i = k$ 的 $i$ 的數量不會超過 $2$ 個
+		\item $Z = 0$
+		\item 無額外限制
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 1 --- $C_i$ 皆相同}}
+	枚舉 $1$ 到 $k$ 和 $k$ 到 $n$ 分別是用哪種移動方式就好。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 2 --- 對於所有 $k$，滿足 $C_i = k$ 的 $i$ 的數量不會超過 $2$ 個}}
+	首先，我們偷偷的在這個子任務再加個 $Z = 0$ 的條件。
+
+	我們可以直接把每個街區視為點，然後每個點可以到達的所有街區建一條邊，由於圖的邊是雙向的，從 $1$ 到 $k$ 再從 $k$ 到 $n$ 的最短路徑，相當於從 $1$ 到 $k$ 加上從 $n$ 到 $k$ 的最短路徑。
+	
+	因此我們只要從點 $1$ 和點 $n$ 跑一次 dijkstra 後就可以得出了。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 2 --- 對於所有 $k$，滿足 $C_i = k$ 的 $i$ 的數量不會超過 $2$ 個}}
+	但是這子任務沒有保證 $Z = 0$，因為題目限制 $Z \le 2Y$，因此我們對每個點都記錄用了 $0$ 次，$1$ 次，或 $2$ 次以上的第二種移動方式到這個點的最短路徑。
+	\pause
+	
+	如此一來我們分別枚舉 $1$ 到 $k$ 和 $k$ 到 $n$ 分別用了幾次第二種移動方式的所有可能，取個最小值就是答案了。
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 3 --- $Z = 0$}}
+	
+	如果用 subtask 2 第一頁寫的那個方式做會遇到一個問題，如果我們每個點可以到達的所有街區都建一條邊，那邊的數量最多有 $O(n^2)$ 條。
+	\pause
+
+	我們可以對每個 $C_i$ 都建一條超級點，對於所有相同 $C_i$ 的點，我們建一條邊權為 $Y$ 的邊到那個超級點，再建一條邊權為 $0$ 的邊回來就好，這樣邊的數量就會是 $O(n)$ 條的。
+	
+\end{frame}
+
+\begin{frame}[fragile]{\btitle{子任務 4 --- 無額外限制}}
+	綜合 subtask 2, 3 就可以做出來了。
+\end{frame}
+
+\end{document}
