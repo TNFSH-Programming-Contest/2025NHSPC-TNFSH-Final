@@ -9,8 +9,8 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | contest_name |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) |
 | problem_label |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) |
-| name |  [:white_check_mark:](pA/problem.json)<br>tribe | [:white_check_mark:](pB/problem.json)<br>cake2 | [:white_check_mark:](pC/problem.json)<br>clock | [:white_check_mark:](pD/problem.json)<br>permutation2 | [:white_check_mark:](pE/problem.json)<br>gambit | [:white_check_mark:](pF/problem.json)<br>tribe2 |
-| title |  [:white_check_mark:](pA/problem.json)<br>部落衝突 | [:white_check_mark:](pB/problem.json)<br>分蛋糕 2 | [:white_check_mark:](pC/problem.json)<br>手錶 | [:white_check_mark:](pD/problem.json)<br>隱藏的排列 2 | [:white_check_mark:](pE/problem.json)<br>賭博 | [:white_check_mark:](pF/problem.json)<br>部落衝突 2 |
+| name |  [:white_check_mark:](pA/problem.json)<br>tribe | [:white_check_mark:](pB/problem.json)<br>cake2 | [:white_check_mark:](pC/problem.json)<br>clock | [:white_check_mark:](pD/problem.json)<br>permutation2 | [:white_check_mark:](pE/problem.json)<br>rook | [:white_check_mark:](pF/problem.json)<br>tribe2 |
+| title |  [:white_check_mark:](pA/problem.json)<br>部落衝突 | [:white_check_mark:](pB/problem.json)<br>分蛋糕 2 | [:white_check_mark:](pC/problem.json)<br>手錶 | [:white_check_mark:](pD/problem.json)<br>隱藏的排列 2 | [:white_check_mark:](pE/problem.json)<br>城堡大戰 | [:white_check_mark:](pF/problem.json)<br>部落衝突 2 |
 | memory_limit |  512 | 512 | 512 | 512 | 512 | 512 |
 | time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
 | has_checker |  True | False | True | True | False | False |
@@ -20,7 +20,7 @@
 | subtasks.json<br>global_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) | [:white_check_mark:](pE/subtasks.json) | [:white_check_mark:](pF/subtasks.json) |
 | tests | [:white_check_mark:](pA/tests) | [:white_check_mark:](pB/tests) | [:white_check_mark:](pC/tests) | [:white_check_mark:](pD/tests) | [:white_check_mark:](pE/tests) | [:white_check_mark:](pF/tests) |
 | statement/index.md | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) | [:white_check_mark:](pE/statement/index.md) | [:white_check_mark:](pF/statement/index.md) |
-| statement/index.pdf | [:white_check_mark:](pA/statement/index.pdf) | [:white_check_mark:](pB/statement/index.pdf) | [:white_check_mark:](pC/statement/index.pdf) | [:white_check_mark:](pD/statement/index.pdf) | [:white_check_mark:](pE/statement/index.pdf) | [:white_check_mark:](pF/statement/index.pdf) |
+| statement/index.pdf | [:white_check_mark:](pA/statement/index.pdf) | [:white_check_mark:](pB/statement/index.pdf) | [:white_check_mark:](pC/statement/index.pdf) | [:white_check_mark:](pD/statement/index.pdf) | [:x:](pE/statement/index.pdf) | [:white_check_mark:](pF/statement/index.pdf) |
 
 <!-- progress end -->
 
@@ -33,7 +33,7 @@
 | B | 4<br>$N \le 3000$ | 36<br>$K > 1$ | 21<br>$|C_i| \le 1$ | 39<br>無額外限制 |
 | C | 3<br>$A_i$ 皆相同 | 26<br>$M \le 5000$ | 47<br>$B_i$ 皆相同 | 24<br>無額外限制 |
 | D | 10<br>$n = 3$ | 90<br>無額外限制 |
-| E | 5<br>$N, Q \le 5000$ | 45<br>類型為 $1$ $l$ $r$ 的事件中 $l = r$ | 13<br>類型為 $4$ $x$ $k$ 事件中 $k = 10^9$ | 37<br>無額外限制 |
+| E | 5<br>$N \le 10 | 45<br>$N \le 20$ | 13<br>保證 $M$ 是質數 | 37<br>無額外限制 |
 | F | 3<br>$1 \le N, Q, \le 2000$ | 23<br>$U_i = i, V_i = i + 1$ | 37<br> $C_i \in \{1, 2\}$ | 37<br>無額外限制 |
 
 <!-- subtasks end -->
