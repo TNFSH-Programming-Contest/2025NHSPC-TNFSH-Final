@@ -8,17 +8,18 @@ subtask_1 200000 1000000000 2
 subtask_1 200000 1000000000 3
 subtask_1 200000 1000000000 4
 subtask_1 200000 2000 5
+manual hack1.in
 
 @subtask 2
 manual example-01.in
 manual example-02.in
-lr_far 200000 5000 5
-lr_far 200000 5000 -5
-n_times 200000 5000 1
-zero_times 200000 5000 1
-random 200000 5000 1
-random 200000 5000 2
-random 200000 5000 3
+lr_far 2000 1000000000 5
+lr_far 2000 5000 -5
+n_times 2000 5000 1
+zero_times 2000 5000 1
+random 2000 5000 1
+random 2000 5000 2
+random 2000 5000 3
 
 @subtask 3
 subtask_3 200000 1000000000 1

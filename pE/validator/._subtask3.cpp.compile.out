@@ -1,0 +1,4 @@
+subtask3.cpp: In function ‘int main()’:
+subtask3.cpp:10:9: warning: unused variable ‘K’ [-Wunused-variable]
+   10 |     int K = inf.readInt(1, N);
+      |         ^

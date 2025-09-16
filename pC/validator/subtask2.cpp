@@ -1,8 +1,8 @@
 #include "testlib.h"
 using namespace std;
 
-const int maxn = 2e5;
-const int maxc = 5000;
+const int maxn = 2000;
+const int maxc = 1e9;
 int main() {
 	registerValidation();
 	int N = inf.readInt(1, maxn);

@@ -14,10 +14,10 @@
 再更精確地來說，我們定義一個合法的切蛋糕方式為一系列的區間 $(l_1, r_1), (l_2, r_2), ..., (l_k, r_k)$ 滿足 $l_1 = 1$, $r_k = n$，並且對於所有 $1 \le i \le k$ 都有 $l_i \le r_i$，且對於所有 $1 \le i < k$，都有 $r_i + 1 =  l_{i + 1}$。
 而這個切蛋糕方式所得到的好感值總和為 
 $$
-\sum_{t = 1}^{k}{\begin{cases}
+\sum_{t = 1}^{k} \begin{cases}
 0 & \text{if  } r_t - l_t + 1 < K \\
-\min_{l_t \le i \le r_t} C_i & \text{otherwise  }
-\end{cases}}
+\min \limits_{l_t \le i \le r_t} C_i & \text{otherwise  }
+\end{cases}
 $$
 我們要找出所有合法的切蛋糕方式中好感值總和最大的是多少。
 

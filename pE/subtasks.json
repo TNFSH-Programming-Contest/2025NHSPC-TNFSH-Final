@@ -9,7 +9,7 @@
         },
         "1": {
             "index": 1,
-            "score": 5,
+            "score": 6,
             "text": "$N \\le 10$",
             "validators": ["subtask1.cpp"]
         },
@@ -27,7 +27,7 @@
         },
         "4": {
             "index": 4,
-            "score": 37,
+            "score": 36,
             "text": "無額外限制",
             "validators": []
         }

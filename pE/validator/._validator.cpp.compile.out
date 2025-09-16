@@ -1,0 +1,7 @@
+validator.cpp: In function ‘int main()’:
+validator.cpp:10:9: warning: unused variable ‘K’ [-Wunused-variable]
+   10 |     int K = inf.readInt(1, N);
+      |         ^
+validator.cpp:12:13: warning: unused variable ‘M’ [-Wunused-variable]
+   12 |         int M = inf.readInt(2, maxc);
+      |             ^

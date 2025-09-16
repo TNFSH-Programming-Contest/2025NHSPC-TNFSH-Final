@@ -1,7 +1,7 @@
 #include "testlib.h"
 using namespace std;
 
-const int maxn = 50;
+const int maxn = 40;
 const int maxc = 1e9 + 7;
 int main() {
 	registerValidation();

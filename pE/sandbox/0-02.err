@@ -1,0 +1,1 @@
+/home/tw20000807/code/2025NHSPC-TNFSH-Final/pE/sandbox/exec.sh: line 6: 20584 Segmentation fault      (core dumped) "${sandbox}/${problem_name}.exe" "$@"

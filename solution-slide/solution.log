@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.4.30)  15 SEP 2025 20:05
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.4.30)  16 SEP 2025 18:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1666,7 +1666,7 @@ runsystem(command -v pygmentize && touch solution.aex)...executed.
 
 runsystem(rm solution.aex)...executed.
 
-No file solution.aux.
+(./solution.aux)
 \openout1 = `solution.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
@@ -1680,7 +1680,7 @@ LaTeX Font Info:    ... okay on input line 107.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
 07.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 107.
@@ -1730,11 +1730,9 @@ LaTeX Font Info:    ... okay on input line 107.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 107.
+(./solution.out) (./solution.out)
 \@outlinefile=\write7
 \openout7 = `solution.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
@@ -1769,7 +1767,7 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into
 your preamble.
  on input line 107.
 
-No file solution.nav.
+(./solution.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 109.
@@ -1820,7 +1818,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-Overfull \vbox (1.68495pt too high) detected at line 150
+Overfull \vbox (1.68697pt too high) detected at line 150
  []
 
 [2
@@ -1829,7 +1827,7 @@ Overfull \vbox (1.68495pt too high) detected at line 150
 \openout4 = `solution.vrb'.
 
  (./solution.vrb)
-Overfull \vbox (1.6841pt too high) detected at line 183
+Overfull \vbox (1.68697pt too high) detected at line 183
  []
 
 [3
@@ -1843,100 +1841,94 @@ Overfull \vbox (1.6841pt too high) detected at line 183
 
 ] (./solution.vrb) [6
 
+] (./solution.vrb) [7
+
 ]
 \openout4 = `solution.vrb'.
 
- (./solution.vrb) [7
 
-]
 (./solution.vrb) [8
 
 ] (./solution.vrb) [9
 
-]
-\openout4 = `solution.vrb'.
-
- (./solution.vrb) [10
-
-] (./solution.vrb) [11
-
-] (./solution.vrb) [12
+] (./solution.vrb) [10
 
 ]
 \openout4 = `solution.vrb'.
 
- (./solution.vrb) [13
+ (./solution.vrb) [11
 
 ]
 \openout4 = `solution.vrb'.
 
- (./solution.vrb) [14
+ (./solution.vrb) [12
+
+] (./solution.vrb) [13
+
+] (./solution.vrb) [14
 
 ]
+\openout4 = `solution.vrb'.
+
+
 (./solution.vrb) [15
 
-] (./solution.vrb) [16
+] [16
 
 ]
 \openout4 = `solution.vrb'.
 
  (./solution.vrb) [17
 
-] [18
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [18
 
 ]
 \openout4 = `solution.vrb'.
 
 
-(./solution.vrb) [19
+(./solution.vrb)
+LaTeX Font Info:    External font `xccex10' loaded for size
+(Font)              <14.4> on input line 257.
+LaTeX Font Info:    External font `xccex10' loaded for size
+(Font)              <10> on input line 257.
+LaTeX Font Info:    External font `xccex10' loaded for size
+(Font)              <7> on input line 257.
+ [19
 
-]
-\openout4 = `solution.vrb'.
-
- (./solution.vrb) [20
+] (./solution.vrb) [20
 
 ]
 \openout4 = `solution.vrb'.
 
  (./solution.vrb) [21
 
-] [22
+]
+(./solution.vrb) [22
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [23
+
+] (./solution.vrb) [24
 
 ]
 \openout4 = `solution.vrb'.
 
 
-(./solution.vrb) [23
+(./solution.vrb) [25
+
+] (./solution.vrb) [26
+
+] [27
 
 ]
 \openout4 = `solution.vrb'.
 
- (./solution.vrb) [24
-
-]
-\openout4 = `solution.vrb'.
-
- (./solution.vrb)
-LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <14.4> on input line 278.
-LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <10> on input line 278.
-LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <7> on input line 278.
- [25
-
-]
-\openout4 = `solution.vrb'.
-
-
-(./solution.vrb) [26
-
-]
-\openout4 = `solution.vrb'.
-
- (./solution.vrb) [27
-
-] (./solution.vrb) [28
+ (./solution.vrb) [28
 
 ]
 \openout4 = `solution.vrb'.
@@ -1944,17 +1936,20 @@ LaTeX Font Info:    External font `xccex10' loaded for size
 
 (./solution.vrb) [29
 
-] (./solution.vrb) [30
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [30
 
 ] (./solution.vrb) [31
-
-] [32
 
 ]
 \openout4 = `solution.vrb'.
 
 
-(./solution.vrb) [33
+(./solution.vrb) [32
+
+] (./solution.vrb) [33
 
 ]
 \openout4 = `solution.vrb'.
@@ -1962,57 +1957,52 @@ LaTeX Font Info:    External font `xccex10' loaded for size
  (./solution.vrb) [34
 
 ]
-\openout4 = `solution.vrb'.
+(./solution.vrb) [35
 
- (./solution.vrb) [35
-
-]
-(./solution.vrb) [36
-
-] (./solution.vrb) [37
+] (./solution.vrb) [36
 
 ]
 \openout4 = `solution.vrb'.
 
- (./solution.vrb) [38
+ (./solution.vrb) [37
 
 ]
 \openout4 = `solution.vrb'.
 
 
-(./solution.vrb) [39
+(./solution.vrb) [38
 
-] (./solution.vrb) [40
-
-] (./solution.vrb) [41
-
-] [42
+] (./solution.vrb) [39
 
 ]
 \openout4 = `solution.vrb'.
 
+ (./solution.vrb) [40
 
-(./solution.vrb) [43
+]
+(./solution.vrb) [41
+
+] (./solution.vrb) [42
 
 ]
 \openout4 = `solution.vrb'.
 
- (./solution.vrb) [44
+ (./solution.vrb
+LaTeX Font Info:    External font `xccex10' loaded for size
+(Font)              <5> on input line 8.
+) [43
 
 ]
-\openout4 = `solution.vrb'.
+(./solution.vrb) [44
 
- (./solution.vrb) [45
+] (./solution.vrb) [45
+
+] (./solution.vrb) [46
 
 ]
-\openout4 = `solution.vrb'.
+(./solution.vrb) [47
 
-
-(./solution.vrb) [46
-
-] (./solution.vrb) [47
-
-] [48
+] (./solution.vrb) [48
 
 ]
 \openout4 = `solution.vrb'.
@@ -2020,33 +2010,21 @@ LaTeX Font Info:    External font `xccex10' loaded for size
  (./solution.vrb) [49
 
 ]
-\openout4 = `solution.vrb'.
-
-
 (./solution.vrb) [50
 
-]
-\openout4 = `solution.vrb'.
+] (./solution.vrb) [51
 
- (./solution.vrb) [51
-
-]
-\openout4 = `solution.vrb'.
-
- (./solution.vrb) [52
+] (./solution.vrb) [52
 
 ]
-\openout4 = `solution.vrb'.
-
-
 (./solution.vrb) [53
 
+] [54
+
 ]
 \openout4 = `solution.vrb'.
 
- (./solution.vrb) [54
-
-] [55
+ (./solution.vrb) [55
 
 ]
 \openout4 = `solution.vrb'.
@@ -2064,10 +2042,7 @@ LaTeX Font Info:    External font `xccex10' loaded for size
 
  (./solution.vrb) [58
 
-]
-\openout4 = `solution.vrb'.
-
- (./solution.vrb) [59
+] (./solution.vrb) [59
 
 ]
 \openout4 = `solution.vrb'.
@@ -2075,7 +2050,10 @@ LaTeX Font Info:    External font `xccex10' loaded for size
 
 (./solution.vrb) [60
 
-] (./solution.vrb) [61
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [61
 
 ]
 \openout4 = `solution.vrb'.
@@ -2091,6 +2069,131 @@ LaTeX Font Info:    External font `xccex10' loaded for size
  (./solution.vrb) [64
 
 ]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [65
+
+]
+(./solution.vrb) [66
+
+] (./solution.vrb) [67
+
+] [68
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [69
+
+]
+\openout4 = `solution.vrb'.
+
+
+(./solution.vrb) [70
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [71
+
+] (./solution.vrb) [72
+
+]
+\openout4 = `solution.vrb'.
+
+
+(./solution.vrb) [73
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [74
+
+] (./solution.vrb) [75
+
+]
+(./solution.vrb) [76
+
+] [77
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [78
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [79
+
+]
+\openout4 = `solution.vrb'.
+
+
+(./solution.vrb) [80
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [81
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [82
+
+]
+(./solution.vrb) [83
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [84
+
+] [85
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [86
+
+]
+\openout4 = `solution.vrb'.
+
+
+(./solution.vrb) [87
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [88
+
+]
+\openout4 = `solution.vrb'.
+
+ (./solution.vrb) [89
+
+]
+\openout4 = `solution.vrb'.
+
+
+(./solution.vrb) [90
+
+] (./solution.vrb) [91
+
+] (./solution.vrb) [92
+
+]
+\openout4 = `solution.vrb'.
+
+
+(./solution.vrb) [93
+
+] (./solution.vrb) [94
+
+] (./solution.vrb) [95
+
+]
 \tf@nav=\write8
 \openout8 = `solution.nav'.
 
@@ -2100,28 +2203,22 @@ LaTeX Font Info:    External font `xccex10' loaded for size
 \tf@snm=\write10
 \openout10 = `solution.snm'.
 
- (./solution.aux)
+
+(./solution.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
  ***********
-
-
-Package rerunfilecheck Warning: File `solution.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `solution.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  C43A8DB8B3A806BE150D568FA55C6FAD;1116.
+Package rerunfilecheck Info: File `solution.out' has not changed.
+(rerunfilecheck)             Checksum: 0BAE419531A33043B5D6F93A632C6BDE;1135.
  ) 
 Here is how much of TeX's memory you used:
- 53688 strings out of 476415
- 1308096 string characters out of 5792682
- 1931627 words of memory out of 5000000
- 74530 multiletter control sequences out of 15000+600000
- 568230 words of font info for 101 fonts, out of 8000000 for 9000
+ 53977 strings out of 476415
+ 1312893 string characters out of 5792682
+ 1935627 words of memory out of 5000000
+ 74742 multiletter control sequences out of 15000+600000
+ 569562 words of font info for 108 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  128i,14n,123p,723b,2177s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on solution.pdf (64 pages).
+Output written on solution.pdf (95 pages).

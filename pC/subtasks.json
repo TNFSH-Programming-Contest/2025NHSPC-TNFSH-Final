@@ -9,19 +9,19 @@
         },
         "1": {
             "index": 1,
-            "score": 3,
+            "score": 5,
             "text": "$A_i$ 皆相同",
             "validators": ["subtask1.cpp"]
         },
         "2": {
             "index": 2,
             "score": 26,
-            "text": "$M \\le 5000$",
+            "text": "$N \\le 2000$",
             "validators": ["subtask2.cpp"]
         },
         "3": {
             "index": 3,
-            "score": 47,
+            "score": 45,
             "text": "$B_i$ 皆相同",
             "validators": ["subtask3.cpp"]
         },
