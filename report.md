@@ -10,7 +10,7 @@
 | contest_name |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) |
 | problem_label |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) |
 | name |  [:white_check_mark:](pA/problem.json)<br>tribe | [:white_check_mark:](pB/problem.json)<br>cake2 | [:white_check_mark:](pC/problem.json)<br>clock | [:white_check_mark:](pD/problem.json)<br>permutation2 | [:white_check_mark:](pE/problem.json)<br>rook | [:white_check_mark:](pF/problem.json)<br>tribe2 |
-| title |  [:white_check_mark:](pA/problem.json)<br>部落衝突 | [:white_check_mark:](pB/problem.json)<br>分蛋糕 2 | [:white_check_mark:](pC/problem.json)<br>手錶 | [:white_check_mark:](pD/problem.json)<br>隱藏的排列 2 | [:white_check_mark:](pE/problem.json)<br>城堡大戰 | [:white_check_mark:](pF/problem.json)<br>部落衝突 2 |
+| title |  [:white_check_mark:](pA/problem.json)<br>部落衝突 | [:white_check_mark:](pB/problem.json)<br>分蛋糕 2 | [:white_check_mark:](pC/problem.json)<br>手錶 | [:white_check_mark:](pD/problem.json)<br>隱藏的排列 2 | [:white_check_mark:](pE/problem.json)<br>數城堡 | [:white_check_mark:](pF/problem.json)<br>部落衝突 2 |
 | memory_limit |  512 | 512 | 512 | 512 | 512 | 512 |
 | time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
 | has_checker |  True | False | True | True | False | False |
