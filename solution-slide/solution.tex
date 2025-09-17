@@ -116,7 +116,7 @@
 \section*{Overview}
 
 \begin{frame}[fragile]{\btitle{預期解出人數}}
-	預測校隊線 : \textcolor{blue}{400}
+	預測前五線 : \textcolor{blue}{400}
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis} [%
@@ -150,7 +150,7 @@
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{實際解出人數}}
-	預測複選線 : \textcolor{blue}{400}  實際複選線 : \textcolor{red}{0}
+	預測前五線 : \textcolor{blue}{400}  實際前五線 : \textcolor{red}{0}
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis} [%
@@ -185,17 +185,21 @@
 \section{出題者想說的 和 Fun Fact}
 
 \begin{frame}[fragile]{\btitle{前言}}
+
+	最近幾年複選前五的線都不到 200 分，可考記錄下的第五名和第六名分數差距都不超過 16 分，今年很強應該能改善一些。
+	\pause
+
 	出題出很久，希望大家都有好好打 
 	\pause
 
-	我覺得題目出的很好。
+	我覺得題目出的很好
 	\pause
 
-	希望大家都能打得跟初選一樣高分。
+	加上這頁後題解總共有 100 頁
 
 \end{frame}
 
-\begin{frame}[fragile]{\btitle{Fun Fact --- pB}}
+\begin{frame}[fragile]{\btitle{pB}}
 	\begin{itemize}
 		\item 本來只有 $K > 1$，初選過發現大家都好強趕緊加難
 		\pause
@@ -205,19 +209,13 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{\btitle{Fun Fact --- pD}}
-	\begin{itemize}
-		\item 想不到吧，又出了一題同個模板的。
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{\btitle{Fun Fact --- pE}}
+\begin{frame}[fragile]{\btitle{pE}}
 	\begin{itemize}
 		\item 加難 pB 後發現整體題目好難，趕緊重出一題簽到題
 		\pause
 		\item 範圍要讓大家以為是折半枚舉，希望不要有人被騙到
 		\pause
-		\item Hikaru 一次變出五隻城堡的影片 https://www.youtube.com/watch?v=JW3FOQWzlvA
+		\item Hikaru 是目前西洋棋等級分第二高的選手，他一次變出五隻城堡的影片 https://www.youtube.com/watch?v=JW3FOQWzlvA
 	\end{itemize}
 \end{frame}
 
@@ -251,14 +249,12 @@
 
 \begin{frame}[fragile]{\btitle{$K = 0$}}
 	很顯然所有點都要是相同顏色才能達成。 
-	\pause
 
 	因為要是有不同顏色的兩個點，他們之間一定有至少一條邊連接不同顏色。
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{$K = N - 1$}}
 	很顯然如果所有點都相同顏色就不可能達成。 
-	\pause
 
 	否則我們可以選兩個不同顏色的點當代表，對於每個點都連到顏色不一樣的點上面就好。
 \end{frame}
@@ -273,6 +269,7 @@
 
 \begin{frame}[fragile]{\btitle{無額外限制}}
 	延續 subtask 3，我們把所有顏色都拿一個點起來當代表。 
+	\pause
 
 	假設有 $c$ 種不同顏色，那 $K \ge c - 1$ 才會有解，因為我們一定要用 $c - 1$ 條不同顏色的邊將這 $c$ 種顏色連通。
 	\pause
@@ -343,17 +340,23 @@
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{$|C_i| \le 1$}}
-	因此我們考慮以下做法，如果有連續的 $-1$，那可以把這些放在同一個區間合併成只有一個 $-1$。
-	而如果有連續 $k$ 個 $1$，我們可以各自一個區間，由於區間兩端不會是正數，可以直接把他們視為一個 $k$。
+	因此我們考慮以下做法
+	
+	如果有連續的 $-1$，那可以把這些放在同一個區間合併成只有一個 $-1$。
+	\pause
+
+	如果有連續 $k$ 個 $1$，我們可以各自一個區間，由於區間兩端不會是正數，可以直接把他們視為一個 $k$。
+	\pause 
+
 	而 $0$ 可以選要自己一個區間還是跟 $-1$ 的區間合併，兩者都不影響那個區間的貢獻，因此可以直接把 $0$ 給刪掉。
 	
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{$|C_i| \le 1$}}
-	如此一來，整個序列會變成 $a_1, -1, a_2, -1, a_3, ...$ 或 $-1, a_1, -1, a_2, -1, a_3, ...$，的形式，其中 $a_i > 0$
+	如此一來，整個序列會變成 $a_1, -1, a_2, -1, a_3, ...$ 或 $-1, a_1, -1, a_2, -1, a_3, ...$，的形式，其中 $a_i > 0$，而這樣切成的區間就會是答案。
 	\pause
 
-	而這樣切成的區間就會是答案，因為如果還需要將一些區間合併。假設還要將 $-1, a_l, -1, a_{l + 1}, ..., -1, a_r, -1$ 給合併。
+	因為如果還需要將一些區間合併。假設還要將 $-1, a_l, -1, a_{l + 1}, ..., -1, a_r, -1$ 給合併。
 	因為 $a_i > 0$，原本的總和一定是一個大於等於 $-1$ 的數，你合併後他的貢獻會變成 $-1$，只會變得更差而已，所以不會有這種狀況發生。
 
 \end{frame}
@@ -383,7 +386,7 @@
 				\item[$\rightarrow$] 像是 -8, 5, -4, 3 要放 -6 進去，可以變成 -8, 5 放 -6 進去
 				\pause
 				\item 否則 $b_{i - 1} + a_{i} > 0$ \\
-				此時後面的數如果要合併要嘛和 $b_{i}$ 合併，要嘛和更前面 $< b_{i}$ 的那個合併，不可能有區間斷在 $b_{i - 1}$ 左邊了 \\
+				就類似上面區間兩端不會有正數那樣，後面的數如果要合併要嘛和 $b_{i}$ 合併，要嘛和更前面 $< b_{i}$ 的那個合併，不可能有區間斷在 $b_{i - 1}$ 左邊了。 \\
 				因此我們可以直接把 $a_{i - 1}$ 看成 $a_{i - 1} + b_{i - 1} + a_{i}$ 並遞迴下去。
 				\pause
 
@@ -397,12 +400,12 @@
 
 \begin{frame}[fragile]{\btitle{無額外限制}}
 	\begin{itemize}
-		\item 否則 $b_{i - 1} < b_i$
+		\item 否則 $b_{i - 1} < b_i$ 
+			\pause
 			\begin{itemize}
 				\item 如果 $a_{i} + b_{i} \le 0$ \\
 				我們可以直接把 $a_i, b_i$ 跟 $b_{i - 1}$ 合併在一起，這樣會讓代價從 $... + b_{i - 1} + a_{i} + b_{i}$ 變為 $... + b_{i - 1}$，不虧。
 				\pause
-
 				\item[$\rightarrow$] 像是 -8, 5 要放 -6 進去，那就變成 -8 然後不放東西
 				\pause
 				\item 否則 $a_{i} + b_{i} > 0$ \\
@@ -440,7 +443,11 @@
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{30 分}}
+	
 	我們可以直接花 $N$ 次調整，每次都把 $A_i$ 調到 $B_i$ 就好
+	\pause
+
+	根本來送分的，希望大家都有拿到
 	
 \end{frame}
 
@@ -515,22 +522,22 @@
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{59.59 分}}
-	如果我們知道了所有區間的逆序數對關係，那我們稍微排容一下就可以知道所有兩個數間的大小關係了。
+	知道了所有區間的逆序數對關係，那稍微排容一下就可以知道所有兩個數間的大小關係了。
 	
 	之後可以使用 std::sort 之類的方法來還原出隱藏的序列。
 
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{無額外限制}}
-	觀察一下分數，要拿到滿分我們最多只能問 $n - 1$ 次，並且根據 subtask 1，我們大概可以通靈出是問所有 $[1, i]$ 區間。
+	觀察一下分數，要拿到滿分最多只能問 $n - 1$ 次，並且根據 subtask 1，大概可以通靈出是問所有 $[1, i]$ 區間。
 	\pause
 
-	我們可以從 $p_1$ 看到 $p_n$，在看到第 $p_i$ 時，我們只需要維護好 $p_1$ 到 $p_i$ 之間的大小關係就好。
+	我們可以從 $p_1$ 看到 $p_n$，在看到第 $p_i$ 時，只需要維護好 $p_1$ 到 $p_i$ 之間的大小關係就好。
 	也就是在不改變相對關係的情況下我們把 $p_1$ 到 $p_i$ 重新編號成 $1$ 到 $i$。 
 	\pause
 
-	假設我們知道這東西了，那我們把 $[1, i + 1]$ 的逆序數對數量減去 $[1, i]$ 的逆序數對數量。
-	就相當於 $[1, i]$ 中有幾個數大於 $p_{i + 1}$，假設叫做 $k$，那我們只要把原先維護好的 $i - k + 1$ 到 $i$ 全部 + 1，並將 $p_{i + 1}$ 設為 $i - k + 1$ 就能維護好了。
+	假設我們知道這東西了，那把 $[1, i + 1]$ 的逆序數對數量減去 $[1, i]$ 的逆序數對數量。
+	就相當於 $[1, i]$ 中有幾個數大於 $p_{i + 1}$，假設叫做 $k$，那只要把原先維護好的 $i - k + 1$ 到 $i$ 全部 + 1，並將 $p_{i + 1}$ 設為 $i - k + 1$ 就能維護好了。
 	
 \end{frame}
 
@@ -557,20 +564,22 @@
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{$N \le 20$}}
-	可以位元 DP 去算。
+	可以bitmask DP 去算。
 
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{$M$ 是質數}}
-	我們先選要放在哪 $k$ 排，方法數會是 $\dbinom{n}{k}$
+	先選要放在哪 $k$ 排，方法數會是 $\binom{n}{k}$
 	\pause
 
-	我們在決定要放在這 $k$ 排的哪些位置，他的方法數就會是 $n \times (n - 1) \times ... \times (n - k + 1)$。 
-	答案就是兩者相乘。
+	再決定要放在這 $k$ 排的哪些位置，他的方法數就會是 $n \times (n - 1) \times ... \times (n - k + 1)$。 
+	\pause
+
+	而答案就是兩者相乘。
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{無額外限制}}
-	就 subtask 3 的做法但 $\dbinom{n}{k}$ 要用 $\dbinom{n}{k} = \dbinom{n - 1}{k} + \dbinom{n - 1}{k - 1}$ 的方法去建。
+	就 subtask 3 的做法但 $\binom{n}{k}$ 要用 $\binom{n}{k} = \binom{n - 1}{k} + \binom{n - 1}{k - 1}$ 的方法去建。
 \end{frame}
 
 
@@ -597,24 +606,27 @@
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{$U_i = i, V_i = i + 1$}}
-	我們可以對每個顏色維護好有哪些點是這個顏色。
+	先對每個顏色維護好有哪些點是這個顏色。
+	\pause
 	
-	由於圖是一條練，如果 $A \le B$ 我們可以用 lowerbound 來找到第一個顏色為 $C$ 且大於等於 $A$ 的點就好。 \\
+	由於圖是一條練，如果 $A \le B$ 我們可以用 lower bound 來找到第一個顏色為 $C$ 且大於等於 $A$ 的點就好。 
+
 	$A > B$ 同理
+
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{$C_i \in \{1, 2\}$}}
-	由於詢問沒有修改，因此我們可以離線來做，我們先處理完顏色為 $1$ 的再處理顏色為 $2$ 的。
+	由於詢問沒有修改，因此可以離線來做，我們先處理完顏色為 $1$ 的再處理顏色為 $2$ 的。
 	\pause
 
-	對於目前要處理的顏色，相同顏色的點我們將那個點權設為 $1$，不同顏色的點權設為 $0$，如此一來我們可以用一條路徑的總和來看這條路徑上是否有出現相同顏色的點。
+	對於目前要處理的顏色，相同顏色的點我們將那個點權設為 $1$，不同顏色的點權設為 $0$，如此一來可以用一條路徑的總和來看這條路徑上是否有出現相同顏色的點。
 	\pause
 
 	我們將 $A$ 到 $B$ 拆成 $A$ 到 $l$ 和 $l$ 到 $B$，其中 $l$ 是 $A$ 跟 $B$ 的LCA，如果 $A$ 到 $l$ 有顏色 $C$，那我們找第一個出現的就好，如果沒有，那我們再到 $B$ 到 $l$ 上找最後一個出現顏色為 $C$ 的點就好，而這些東西可以用倍增之類的方式來維護。
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{無額外限制}}
-	延續 subtask 3，我們也是離線並且相同顏色的詢問一起處理，由於顏色很多，不可能每種顏色都建一個倍增表，我們需要一個能夠快速算出一條路徑上有多少東西並修改的資料結構。
+	延續 subtask 3，也是離線並且相同顏色的詢問一起處理，由於顏色很多，不可能每種顏色都建一個倍增表，因此需要一個能夠快速算出一條路徑上有多少東西並修改的資料結構。
 	\pause
 
 	輕重鍊剖分完全符合這個條件。雖然輕重鍊剖分沒有超綱，但輕重鍊剖分又大又難寫，換個經典的替代方法，樹差分。

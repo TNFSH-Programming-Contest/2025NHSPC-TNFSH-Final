@@ -1,7 +1,7 @@
 \beamer@sectionintoc {2}{出題者想說的 和 Fun Fact}{4}{0}{1}
 \beamer@sectionintoc {3}{A. 部落衝突 (tribe)}{16}{0}{2}
-\beamer@sectionintoc {4}{B. 切蛋糕 2(cake2)}{27}{0}{3}
-\beamer@sectionintoc {5}{C. 手錶 (clock)}{54}{0}{4}
-\beamer@sectionintoc {6}{D. 隱藏的排列 2 (permutation2)}{68}{0}{5}
-\beamer@sectionintoc {7}{E. 數城堡 (rook)}{77}{0}{6}
-\beamer@sectionintoc {8}{F. 部落衝突 2 (tribe2)}{85}{0}{7}
+\beamer@sectionintoc {4}{B. 切蛋糕 2(cake2)}{26}{0}{3}
+\beamer@sectionintoc {5}{C. 手錶 (clock)}{56}{0}{4}
+\beamer@sectionintoc {6}{D. 隱藏的排列 2 (permutation2)}{71}{0}{5}
+\beamer@sectionintoc {7}{E. 數城堡 (rook)}{80}{0}{6}
+\beamer@sectionintoc {8}{F. 部落衝突 2 (tribe2)}{89}{0}{7}
