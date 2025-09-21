@@ -132,7 +132,7 @@
 				(2,1) 
 				(3,5)
 				(4,4)
-				(5,10)
+				(5,8)
 				(6,2)
 			};
 			
@@ -166,7 +166,7 @@
 				(2,1) 
 				(3,5)
 				(4,4)
-				(5,10)
+				(5,8)
 				(6,2)
 			};
 			\addplot plot coordinates {
@@ -192,7 +192,7 @@
 	最近幾年複選第五的線都不到 200 分，可考記錄下的第五名和第六名分數差距都不超過 16 分。
 	\pause
 
-	這次題目難度以四題來決勝負，讓大家比較多時間能思考加實作難題，希望題目夠難。
+	初選大家都好強，希望複選題目夠難。
 	\pause
 
 	加上這頁後題解總共有 100 頁
@@ -203,18 +203,14 @@
 	\begin{itemize}
 		\item 本來只有 $K > 1$，初選過發現大家都好強趕緊加難
 		\pause
-		\item 出題者自己在這題燒雞超久，本來以為是類似 AI666 那題的 greedy 作法，對拍後才發現假解，又想了兩天才想到正解。
+		\item 本來以為可以用 AI666 那題的 greedy 作法，寫完後對拍後才發現假解。
 		\pause
-		\item 花了 2 小時暴力跑過對拍，應該沒有又假解。
+		\item 花了 2 小時暴力跑過對拍，官解應該沒有假解。
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{pE}}
 	\begin{itemize}
-		\item 加難 pB 後發現整體題目好難，感覺大家會沒時間思考和實作，因此把原來的 pE 砍掉換成一題大家應該要可以秒殺的這題。
-		\pause
-		\item 範圍要讓大家以為是折半枚舉，希望不要有人被騙到
-		\pause
 		\item Hikaru 是目前西洋棋等級分第二高的選手，他一次變出五隻城堡的影片 https://www.youtube.com/watch?v=JW3FOQWzlvA
 	\end{itemize}
 \end{frame}
@@ -547,41 +543,53 @@
 \section{E. 數城堡 (rook)}
 
 \begin{frame}[fragile]{\btitle{題目敘述}}
-	給你 $N, K, M$，問你在 $N \times N$ 的棋盤上放 $K$ 隻城堡，使得任兩個城堡不互相攻擊到有多少種方法 $\mod M$
-
+	有一個 $N \times N$ 的棋盤和 $K$ 種顏色的的城堡，第 $i$ 種顏色的城堡有 $C_i$ 個。要算有多少種方法能把這些城堡全部放在這個棋盤上，使得任兩個城堡都不會互相攻擊到。
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{子任務}}
 	\begin{enumerate}
-		\item $N \le 10$
-		\item $N \le 20$
+		\item $K = N$
 		\item $M$ 是質數
+		\item $K = 1$
 		\item 無額外限制
 	\end{enumerate}
 \end{frame}
 
-\begin{frame}[fragile]{\btitle{$N \le 10$}}
-	暴力枚舉就好
+\begin{frame}[fragile]{\btitle{$K = N$}}
 
+	假設 $s = \sum C_i$，由於 $C_i \ge 1$，因此這個子任務中 $s \ge N$。
+	\pause
+
+	因為每一排只能放一個城堡，所以最多只能放 $N$ 個城堡，所以 $s > N$ 答案就是 $0$。
+	\pause
+
+	$s = N$ 時先假設城堡顏色都一樣，那會有 $s!$ 種放法。
+	
+	在將城堡上色，有 $s!$ 種上色方式。
+
+	因此答案會是 $(s!)^2$
 \end{frame}
 
-\begin{frame}[fragile]{\btitle{$N \le 20$}}
-	可以bitmask DP 去算。
+\begin{frame}[fragile]{\btitle{$K = 1$}}
+
+	我們先選要放在哪 $s$ 排，哪 $s$ 列，所以會有 $\binom{N}{s}^2$ 種選法。
+	\pause
+
+	再將這 $s$ 個城堡放上去，會有 $s!$ 種放法，所以答案會是 $\binom{N}{s}^2 \times s!$
+	\pause
+
+	而 $\binom{N}{s} = \dfrac{N!}{s!(N-s)!}$ 我們可以數每個質數被乘到幾次後先約分再把他們給乘起來。
 
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{$M$ 是質數}}
-	先選要放在哪 $k$ 排，方法數會是 $\binom{n}{k}$
-	\pause
-
-	再決定要放在這 $k$ 排的哪些位置，他的方法數就會是 $n \times (n - 1) \times ... \times (n - k + 1)$。 
-	\pause
-
-	而答案就是兩者相乘。
+	延續 $K = 1$ 的子任務，我們再來把城堡上色，會有 $\dfrac{s!}{\prod{C_i!}}$ 種上色方法，所以答案會是 $\binom{N}{s}^2 \times s! \times \dfrac{s!}{\prod{C_i!}}$。
+	
+	因為 $M$ 是質數，可以用模逆元來算。
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{無額外限制}}
-	就 subtask 3 的做法但 $\binom{n}{k}$ 要用 $\binom{n}{k} = \binom{n - 1}{k} + \binom{n - 1}{k - 1}$ 的方法去建。
+	$M$ 是質數的做法，但先數每個質數被乘到幾次後先約分再把他們給乘起來。
 \end{frame}
 
 
