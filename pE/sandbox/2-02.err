@@ -1,0 +1,2 @@
+rook.exe: rook.cpp:22: void sol(): Assertion `sum == n' failed.
+/home/tw20000807/code/2025NHSPC-TNFSH-Final/pE/sandbox/exec.sh: line 6: 126262 Aborted                 (core dumped) "${sandbox}/${problem_name}.exe" "$@"
