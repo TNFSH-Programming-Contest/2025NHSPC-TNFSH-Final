@@ -10,19 +10,19 @@
         "1": {
             "index": 1,
             "score": 6,
-            "text": "$N \\le 10$",
+            "text": "$K = N$",
             "validators": ["subtask1.cpp"]
         },
         "2": {
             "index": 2,
             "score": 45,
-            "text": "$N \\le 20$",
+            "text": "保證 $M$ 是質數",
             "validators": ["subtask2.cpp"]
         },
         "3": {
             "index": 3,
             "score": 13,
-            "text": "保證 $M$ 是質數",
+            "text": "$K$ = 1",
             "validators": ["subtask3.cpp"]
         },
         "4": {

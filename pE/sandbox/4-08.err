@@ -1,3 +1,0 @@
-terminate called after throwing an instance of 'std::length_error'
-  what():  cannot create std::vector larger than max_size()
-/home/tw20000807/code/2025NHSPC-TNFSH-Final/pE/sandbox/exec.sh: line 6: 22970 Aborted                 (core dumped) "${sandbox}/${problem_name}.exe" "$@"

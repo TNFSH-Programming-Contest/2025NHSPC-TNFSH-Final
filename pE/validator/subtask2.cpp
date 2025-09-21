@@ -1,7 +1,7 @@
 #include "testlib.h"
 using namespace std;
 
-const int maxn = 20;
+const int maxn = 200000;
 const int maxc = 1e9 + 7;
 int main() {
 	registerValidation();
@@ -11,5 +11,13 @@ int main() {
 	inf.readSpace();
 	int M = inf.readInt(2, maxc);
 	inf.readEoln();
+	for(int i = 0; i < K; ++i){
+		inf.readInt(1, N);
+		if(i == K - 1) inf.readEoln();
+		else inf.readSpace();
+	}
 	inf.readEof();
+	for(int i = 2; i * i <= M; ++i){
+		ensure(M % i != 0);
+	}
 }
