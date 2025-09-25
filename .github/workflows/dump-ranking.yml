@@ -11,3 +11,4 @@ jobs:
     uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/dump-ranking.yml@main
     with:
       url: ${{ inputs.url }}
+# 
