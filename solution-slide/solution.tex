@@ -150,7 +150,7 @@
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{實際解出人數}}
-	預測第五線 : \textcolor{blue}{400}  實際第五線 : \textcolor{red}{0}
+	預測第五線 : \textcolor{blue}{400}  實際第五線 : \textcolor{red}{357}
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis} [%
@@ -170,12 +170,12 @@
 				(6,2)
 			};
 			\addplot plot coordinates {
-				(1,1) 
+				(1,8) 
 				(2,1) 
-				(3,1) 
-				(4,1)
-				(5,1)
-				(6,1)
+				(3,4) 
+				(4,6)
+				(5,3)
+				(6,2)
 			};
 			\end{axis}
 		\end{tikzpicture}
@@ -187,20 +187,29 @@
 \begin{frame}[fragile]{\btitle{前言}}
 
 	出題出很久，希望大家都有好好打 
+	\pause
+
+
+	除了 E 外預測的算滿準的，我以為大家數學都很好
+	\pause
+
+	題目應該比去年簡單一點
 
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{pB}}
 	\begin{itemize}
-		\item 本來以為可以用 AI666 那題的 greedy 作法，寫完後對拍後才發現假解。
+		\item 本來以為可以用 AI666 那題的 greedy 作法，寫完後才發現假解。
 		\pause
-		\item 花了 2 小時暴力跑過對拍，官解應該沒有假解。
+		\item 花了 2 小時和暴力 DP 跑過對拍，官解應該沒有假解。
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{\btitle{pE}}
 	\begin{itemize}
 		\item Hikaru 是目前西洋棋等級分第二高的選手，他一次變出五隻城堡的影片 https://www.youtube.com/watch?v=JW3FOQWzlvA
+		\item 對手其實是印度人，為了湊出中國剩餘定理才讓他變中國人，但這題應該跟中國剩餘定理完全沒關係。
+
 	\end{itemize}
 \end{frame}
 
@@ -210,7 +219,7 @@
 		\item A : 構造題
 		\item B : 單調隊列
 		\item C : 貪心
-		\item D : greedy
+		\item D : 互動題
 		\item E : 排列組合
 		\item F : 樹論
 	\end{enumerate}
